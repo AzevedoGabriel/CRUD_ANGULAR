@@ -1,0 +1,50 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h3>{{ formValue.get('id')?.value ? 'Edição': 'Cadastro' }} de Usuário</h3>
+    </div>
+<form [formGroup]="formValue" (ngSubmit)="enviar()">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Nome"
+      formControlName="firstName">
+    <label for="floatingInput">Nome</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput0"
+      placeholder="Sobrenome"
+      formControlName="lastName">
+    <label for="floatingInput">Sobrenome</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="email"
+      class="form-control"
+      id="floatingInput2"
+      placeholder="Cidade"
+      formControlName="cidade">
+    <label for="floatingInput">Cidade</label>
+  </div>
+  <div class="form-floating mb-3">
+    <textarea
+      class="form-control"
+      placeholder="Telefone"
+      id="floatingTextarea"
+      formControlName="telefone"></textarea>
+    <label for="floatingTextarea">Telefone</label>
+  </div>
+  <a
+    style="margin-right: 15px;"
+    routerLink="/listar"
+    class="btn btn-dark">Voltar</a>
+  <button
+    type="submit"
+    class="btn btn-dark">Enviar</button>
+</form>
+</div>
+</div>
